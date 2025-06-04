@@ -23,6 +23,7 @@ jobs:
           with:
             node-version: 24
         - name: Install build and test
+          working-directory: .github/workflows
           run: |
             npm install
             npm run build --if-present
