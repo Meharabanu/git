@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
       runs-on: ubuntu-latest
@@ -18,7 +21,7 @@ jobs:
         - name: To install Node.js
           uses: actions/setup-node@v4
           with:
-            node-version: 'latest'
+            node-version: 24
         - name: Install build and test
           run: |
             npm install
